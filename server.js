@@ -42,7 +42,6 @@ function main() {
             console.log(user);
             res.status(200).send("Auth Service: POST /api/register -> User registriert: " + username);
         }).catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
             console.log("Auth Service: POST /api/register -> Fehler beim registrieren: " + errorMessage);
             res.status(500).send("Auth Service: POST /api/register -> Fehler beim registrieren:" + errorMessage);
